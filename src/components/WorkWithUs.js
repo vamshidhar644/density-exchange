@@ -32,9 +32,9 @@ const WorkWithUs = () => {
                 About
               </h2>
               <p className="text-xs md:text-sm lg:text-base text-start mt-2">
-                At ahead our goal is to make self- improvement fun and lasting.
-                We know there's a way how to make it work. And that's what aHead
-                is all about!
+                {
+                  "At ahead our goal is to make self- improvement fun and lasting. We know there's a way how to make it work. And that's what aHead is all about!"
+                }
               </p>
             </div>
             <div

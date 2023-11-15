@@ -10,7 +10,7 @@ const SelfImprovement = () => {
           data-aos="fade-up"
           className="text-[#3a3a3a] text-sm md:text-base lg:text-lg sm:text-xs"
         >
-          Wrong with self-improvement & how we're fixing it.
+          {"Wrong with self-improvement & how we're fixing it."}
         </span>
         <div data-aos="fade-left" className="flex items-center mt-4">
           <h1 className="text-3xl w-fit sm:text-4xl lg:text-5xl font-bold text-start mr-2">

@@ -12,8 +12,9 @@ const Test = () => {
             Before you get started
           </h1>
           <p className="text-center text-base md:text-lg lg:text-xl mt-4">
-            "We won't share your answers with anyone (and won't ever tell you
-            which friends said what about you)"
+            {
+              "We won't share your answers with anyone (and won't ever tell you which friends said what about you)"
+            }
             <br></br>
             with love,
             <span className="text-[#3a3a3a] text-sm md:text-base lg:text-lg pl-1">
