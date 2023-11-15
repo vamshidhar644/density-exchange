@@ -9,6 +9,7 @@ import OthersThink from '@/components/OthersThink';
 import Test from '@/components/Test';
 import Vacancies from '@/components/Vacancies';
 
+
 export default function Home() {
   return (
     <>

@@ -29,7 +29,7 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   key={link.key}
-                  className="ml-3 text-[#3a3a3a] hover:text-[#151515]"
+                  className="ml-3 text-[#3a3a3a] hover:text-[#151515] "
                 >
                   {link.label}
                 </Link>

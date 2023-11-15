@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { OTHERS_THINK, PATH } from '@/constants';
+import { content } from '../../tailwind.config';
 
 const OthersThink = () => {
   return (
@@ -27,83 +29,53 @@ const OthersThink = () => {
             className="relative grid grid-cols-1 sm:grid-cols-3 gap-4 mt-20 mb-4 mx-4"
           >
             <div className="absolute border-l-4 sm:border-l-0 w-2 h-4/6 sm:h-0 sm:rotate-0 sm:w-4/6 left-6 top-[50%] translate-y-[-50%] sm:translate-y-0 sm:top-12 sm:left-[50%] sm:translate-x-[-50%] sm:border-b-4 border-dashed border-[#bbcbcc]"></div>
-            <div
-              data-aos="fade-left"
-              data-aos-delay={200}
-              className="z-10 flex items-center sm:flex-col gap-2 col-span-1"
-            >
-              <div className="flex items-center justify-center relative shrink-0">
-                <Image
-                  className="block my-6 h-12 lg:h-16 w-12 lg:w-16"
-                  width={128}
-                  height={128}
-                  src="/images/spinner.png"
-                  alt="spinner"
-                />
-                <span className="absolute text-[#bbcbcc] text-xl lg:text-2xl text-center">
-                  1
-                </span>
-              </div>
-              <p
-                data-aos="fade-up"
-                className="text-start sm:text-center text-sm font-semibold"
-              >
-                Answer questions on your social skills
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              data-aos-delay={400}
-              className="z-10 flex items-center sm:flex-col gap-2 col-span-1"
-            >
-              <div className="flex items-center justify-center relative shrink-0">
-                <Image
-                  className="block my-6 h-12 lg:h-16 w-12 lg:w-16"
-                  width={128}
-                  height={128}
-                  src="/images/spinner.png"
-                  alt="spinner"
-                />
-                <span className="absolute text-[#bbcbcc] text-xl lg:text-2xl text-center">
-                  2
-                </span>
-              </div>
-              <p
-                data-aos="fade-right"
-                className="text-start sm:text-center text-sm font-semibold"
-              >
-                Let others anonymously answer the same questions about you
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              data-aos-delay={600}
-              className="z-10 flex items-center sm:flex-col gap-2 col-span-1"
-            >
-              <div className="flex items-center justify-center relative shrink-0">
-                <Image
-                  className="block my-6 h-12 lg:h-16 w-12 lg:w-16"
-                  width={128}
-                  height={128}
-                  src="/images/spinner.png"
-                  alt="spinner"
-                />
-                <span className="absolute text-[#bbcbcc] text-xl lg:text-2xl text-center">
-                  3
-                </span>
-              </div>
-              <p
+            {OTHERS_THINK.map((conntent, i) => (
+              <div
+                key={i}
                 data-aos="fade-left"
-                className="text-start sm:text-center text-sm font-semibold"
+                data-aos-delay={conntent.data_aos_delay}
+                className="z-10 flex items-center sm:flex-col gap-2 col-span-1"
               >
-                Find out where you and others see things the same way - and
-                where not!
-              </p>
-            </div>
+                <div className="flex items-center justify-center relative shrink-0">
+                  <Image
+                    className="block my-6 h-12 lg:h-16 w-12 lg:w-16"
+                    width={128}
+                    height={128}
+                    src="/images/spinner.png"
+                    alt="spinner"
+                  />
+                  <span className="absolute text-[#bbcbcc] text-xl lg:text-2xl text-center">
+                    {i + 1}
+                  </span>
+                </div>
+                <p
+                  data-aos={conntent.data_aos_fade}
+                  className="text-start sm:text-center text-sm font-semibold"
+                >
+                  {conntent.text}
+                </p>
+              </div>
+            ))}
           </motion.div>
+
           <div className="relative grid grid-cols-1 items-center md:grid-cols-4 h-[400px] md:h-[200px] gap-4 mt-10 mb-10 shadow-xl bg-white md:mx-20 rounded-2xl p-2 md:p-4">
             <div className="absolute border-l-4 md:border-l-0 w-2 h-[80%] md:h-0 md:w-9/12 left-[50.2%] md:left-[50%] top-[50%] translate-y-[-50%] md:translate-y-0 md:top-24 translate-x-[-50%] md:border-b-4 border-[#bbcbcc]"></div>
-            <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
+
+            {PATH.map((path, i) => (
+              <div
+                key={i}
+                className="relative z-10 flex items-center flex-col gap-2 col-span-1"
+              >
+                <div className={`${path.bg_color} w-6 h-6 rounded-full`}></div>
+                <p
+                  data-aos={path.data_aos_fade}
+                  className={`absolute top-2 ${path.anim_direction}-[54%] mt-4 ml-1 md:-top-${path.top} md:left-${path.left} text-center text-white text-xs ${path.bg_color} rounded-xl px-4 py-2 whitespace-nowrap w-fit`}
+                >
+                  {path.text}
+                </p>
+              </div>
+            ))}
+            {/* <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
               <div className="bg-blue-500 w-6 h-6 rounded-full"></div>
               <p
                 data-aos="fade-up"
@@ -112,6 +84,7 @@ const OthersThink = () => {
                 You
               </p>
             </div>
+
             <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
               <div className="bg-yellow-400 w-6 h-6 rounded-full"></div>
               <p
@@ -121,6 +94,7 @@ const OthersThink = () => {
                 Anonymonos 1
               </p>
             </div>
+
             <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
               <div className="bg-pink-400 w-6 h-6 rounded-full"></div>
               <p
@@ -130,6 +104,7 @@ const OthersThink = () => {
                 Anonymonos 2
               </p>
             </div>
+
             <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
               <div className="bg-green-400 w-6 h-6 rounded-full"></div>
               <p
@@ -138,7 +113,7 @@ const OthersThink = () => {
               >
                 Anonymonos 3
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

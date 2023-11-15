@@ -8,21 +8,21 @@ const SelfImprovement = () => {
       <div className="mx-4 md:mx-8 lg:mx-16 py-20">
         <span
           data-aos="fade-up"
-          className="text-[#3a3a3a] text-sm md:text-base lg:text-lg"
+          className="text-[#3a3a3a] text-sm md:text-base lg:text-lg sm:text-xs"
         >
           Wrong with self-improvement & how we're fixing it.
         </span>
-        <div data-aos="fade-left" className="flex items-center -mt-4">
+        <div data-aos="fade-left" className="flex items-center mt-4">
           <h1 className="text-3xl w-fit sm:text-4xl lg:text-5xl font-bold text-start mr-2">
             Self-improvement. Ugh.
           </h1>
           <Image
             data-aos="zoom-in"
             data-aos-delay={200}
-            className="block -rotate-12 h-16 lg:h-20 w-auto"
+            className="block -rotate-12 h-24 lg:h-20 w-auto"
             width={128}
             height={128}
-            src="/images/playerBeige.png"
+            src="/images/11.png"
             alt="playerBeige"
           />
         </div>

@@ -34,43 +34,47 @@ const Emotions = () => {
       <div className="mx-2 md:mx-6 lg:mx-10 flex items-center my-auto">
         <h1
           data-aos="fade-right"
-          className="text-3xl w-fit sm:text-4xl lg:text-5xl font-bold text-start mr-2"
+          className="text-3xl w-fit sm:text-4xl lg:text-5xl font-bold text-start mr-2 space-x-1"
         >
-          Does this sound familiar?
+          Does this sound familiar...
         </h1>
         <Image
           data-aos="zoom-in"
-          data-aos-delay={200}
-          className="block -rotate-12 h-16 lg:h-20 w-auto"
-          width={128}
-          height={128}
-          src="/images/playerPink.png"
+          data-aos-delay={300}
+          className="block rotate-12 h-16 lg:h-20 w-auto"
+          width={140}
+          height={140}
+          src="/images/4.jpg"
           alt="player"
         />
       </div>
 
       <div className="overflow-auto scrollbar-hide mb-36" data-aos="fade-up">
-        <div className="relative -px-32 flex items-center justify-around w-full gap-x-16 py-8">
+        <div className="relative px-12 flex items-center justify-start  w-full gap-x-16 py-8">
           {MANIFESTO.map((manifesto, i) => (
             <motion.div
               key={i}
               className="flex items-center justify-center w-[300px] h-full min-w-[300px] max-w-[300px]"
-              animate={{ rotate: [0, 20, 0] }}
+              animate={{ rotate: 0 }}
               transition={{
-                duration: 1,
+                duration: manifesto.duration,
                 ease: 'linear',
               }}
-              whileHover={{ rotate: 0 }}
+              whileHover={{ rotate: manifesto.rotate }}
             >
               <div className="flex items-center justify-center w-[300px] h-full min-w-[300px] max-w-[300px]">
-                <div className="bg-[#d9f2ff] px-4 py-6 rounded-xl w-full grow h-full">
+                <div
+                  className={`${manifesto.background} px-4 py-6 rounded-xl w-full grow h-full `}
+                >
                   <h1 className="text-3xl lg:text-4xl font-bold text-start mb-4">
                     {manifesto.emoji}
                   </h1>
                   <h2 className="text-sm lg:text-xl font-bold">
                     {manifesto.title}
                   </h2>
-                  <p className="text-xs lg:text-sm text-[#7c7a88] mt-1">
+                  <p
+                    className={`text-xs lg:text-sm ${manifesto.text_color} mt-1`}
+                  >
                     {manifesto.desc}
                   </p>
                 </div>

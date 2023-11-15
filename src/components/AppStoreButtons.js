@@ -54,7 +54,7 @@ const AppStoreButtons = () => {
         </div>
         <span
           data-aos="fade-up"
-          data-aos-delay={500}
+          data-aos-delay={200}
           className="text-xs lg:text-sm text-gray-500 font-semibold"
         >
           100+ App Store ratings
