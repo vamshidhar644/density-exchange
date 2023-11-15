@@ -54,13 +54,13 @@ const Emotions = () => {
           {MANIFESTO.map((manifesto, i) => (
             <motion.div
               key={i}
-              className="flex items-center justify-center w-[300px] h-full min-w-[300px] max-w-[300px]"
-              animate={{ rotate: 0 }}
+              className="flex items-center justify-center w-[300px] h-full min-w-[300px] max-w-[300px] rotate-12"
+              animate={{ rotate: manifesto.rotate }}
               transition={{
                 duration: manifesto.duration,
                 ease: 'linear',
               }}
-              whileHover={{ rotate: manifesto.rotate }}
+              whileHover={{ rotate: 0 }}
             >
               <div className="flex items-center justify-center w-[300px] h-full min-w-[300px] max-w-[300px]">
                 <div
