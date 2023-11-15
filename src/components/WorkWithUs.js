@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { WORK_WITH_US } from '@/constants';
 
 const WorkWithUs = () => {
   return (
@@ -9,7 +10,6 @@ const WorkWithUs = () => {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.05 }}
         className="mx-2 md:mx-6 lg:mx-10 relative bg-[#f3f1ff] min-h-[600px] rounded-2xl grid place-content-center"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-4 lg:mx-8 py-10 lg:py-16">
@@ -57,60 +57,19 @@ const WorkWithUs = () => {
               ahead
             </h1>
             <div className="grid grid-flow-row items-center justify-center overflow-y-auto px-2 sm:px-10 gap-y-4 max-h-[500px] py-4">
-              <div className="flex flex-col p-2 sm:p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
-              <div className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
-              <div className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
-              <div className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
-              <div className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
-              <div className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl">
-                <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
-                  Power through, even when the going gets tough
-                </h1>
-                <p className="text-start text-base md:text-lg lg:text-xl">
-                  We help you spot and work around whatever stands in the way,
-                  be it bad habits, fears, etc.
-                </p>
-              </div>
+              {WORK_WITH_US.map((content, i) => (
+                <div
+                  className="flex flex-col p-6 items-center justify-center gap-4 bg-white rounded-xl"
+                  key={i}
+                >
+                  <h1 className="text-sm md:text-base lg:text-xl font-bold text-start">
+                    {content.title}
+                  </h1>
+                  <p className="text-start text-base md:text-lg lg:text-xl">
+                    {content.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

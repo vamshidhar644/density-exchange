@@ -1,3 +1,4 @@
+import { VACANCIES } from '@/constants';
 import React from 'react';
 
 const Vacancies = () => {
@@ -8,45 +9,22 @@ const Vacancies = () => {
           Open vacancies
         </h1>
         <div className="grid grid-flow-row sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 mt-6">
-          <div
-            data-aos="fade-right"
-            className="bg-[#fefbec] p-4 rounded-xl flex flex-col"
-          >
-            <h2 className="text-sm md:text-base lg:text-xl font-semibold text-start">
-              Senior Full-Stack Engineer
-            </h2>
-            <ul className="list-disc list-inside mt-2">
-              <li>Full-time position</li>
-              <li>Berlin or remote</li>
-              <li>€65-85k, 0.5-1.50% equity share options</li>
-            </ul>
-          </div>
-          <div
-            data-aos="fade-up"
-            className="bg-[#fefbec] p-4 rounded-xl flex flex-col"
-          >
-            <h2 className="text-sm md:text-base lg:text-xl font-semibold text-start">
-              Senior Designer
-            </h2>
-            <ul className="list-disc list-inside mt-2">
-              <li>Full-time position</li>
-              <li>Berlin or remote</li>
-              <li>€40-55k, 0.25-0.50% equity share options</li>
-            </ul>
-          </div>
-          <div
-            data-aos="fade-left"
-            className="bg-[#fefbec] p-4 rounded-xl flex flex-col"
-          >
-            <h2 className="text-sm md:text-base lg:text-xl font-semibold text-start">
-              Superstar Intern
-            </h2>
-            <ul className="list-disc list-inside mt-2">
-              <li>Full-time position</li>
-              <li>Berlin or remote</li>
-              <li>€20-24k, 0.5-1.50% equity share options</li>
-            </ul>
-          </div>
+          {VACANCIES.map((vacancies, i) => (
+            <div
+              key={i}
+              data-aos="fade-right"
+              className="bg-[#fefbec] p-4 rounded-xl flex flex-col"
+            >
+              <h2 className="text-sm md:text-base lg:text-xl font-semibold text-start">
+                {vacancies.title}
+              </h2>
+              <ul className="list-disc list-inside mt-2">
+                {vacancies.subtitle.map((subtitle, i) => (
+                  <li key={i}>{subtitle}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </>

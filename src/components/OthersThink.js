@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { OTHERS_THINK, PATH } from '@/constants';
-import { content } from '../../tailwind.config';
 
 const OthersThink = () => {
   return (
@@ -69,51 +68,12 @@ const OthersThink = () => {
                 <div className={`${path.bg_color} w-6 h-6 rounded-full`}></div>
                 <p
                   data-aos={path.data_aos_fade}
-                  className={`absolute top-2 ${path.anim_direction}-[54%] mt-4 ml-1 md:-top-${path.top} md:left-${path.left} text-center text-white text-xs ${path.bg_color} rounded-xl px-4 py-2 whitespace-nowrap w-fit`}
+                  className={`absolute top-2 ${path.anim_direction}-[50%] mt-4 ml-1 md:-top-${path.top} md:left-${path.left} text-center text-white font-bold ${path.bg_color} rounded-xl px-4 py-2 whitespace-nowrap w-fit`}
                 >
                   {path.text}
                 </p>
               </div>
             ))}
-            {/* <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
-              <div className="bg-blue-500 w-6 h-6 rounded-full"></div>
-              <p
-                data-aos="fade-up"
-                className="absolute top-2 left-[54%] md:-top-10 md:left-16 text-center text-white text-xs bg-blue-500 rounded-xl px-4 py-2"
-              >
-                You
-              </p>
-            </div>
-
-            <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
-              <div className="bg-yellow-400 w-6 h-6 rounded-full"></div>
-              <p
-                data-aos="fade-left"
-                className="absolute w-fit top-2 right-[54%] md:top-8 md:-left-0 text-center text-white text-xs bg-yellow-400 rounded-xl px-4 py-2"
-              >
-                Anonymonos 1
-              </p>
-            </div>
-
-            <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
-              <div className="bg-pink-400 w-6 h-6 rounded-full"></div>
-              <p
-                data-aos="fade-right"
-                className="absolute w-fit top-2 left-[54%] md:-top-12 md:left-20 text-center text-white text-xs bg-pink-400 rounded-xl px-4 py-2"
-              >
-                Anonymonos 2
-              </p>
-            </div>
-
-            <div className="relative z-10 flex items-center flex-col gap-2 col-span-1">
-              <div className="bg-green-400 w-6 h-6 rounded-full"></div>
-              <p
-                data-aos="fade-up"
-                className="absolute w-fit top-2 right-[54%] md:top-8 md:left-20 text-center text-white text-xs bg-green-400 rounded-xl px-4 py-2"
-              >
-                Anonymonos 3
-              </p>
-            </div> */}
           </div>
         </div>
       </div>

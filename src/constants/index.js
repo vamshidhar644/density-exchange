@@ -120,7 +120,7 @@ export const PATH = [
     bg_color: 'bg-yellow-400',
     data_aos_fade: 'fade-left',
     anim_direction: 'right',
-    top: 8,
+    top: 4,
     left: 0,
     text: 'Anonymonos 1',
   },
@@ -136,8 +136,63 @@ export const PATH = [
     bg_color: 'bg-green-400',
     data_aos_fade: 'fade-up',
     anim_direction: 'right',
-    top: 8,
+    top: 14,
     left: 20,
     text: 'Anonymonos 3',
+  },
+];
+
+export const WORK_WITH_US = [
+  {
+    title: 'Power through, even when the going gets tough',
+    description:
+      'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.',
+  },
+  {
+    title: 'Power through, even when the going gets tough',
+    description:
+      'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.',
+  },
+  {
+    title: 'Power through, even when the going gets tough',
+    description:
+      'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.',
+  },
+  {
+    title: 'Power through, even when the going gets tough',
+    description:
+      'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.',
+  },
+  {
+    title: 'Power through, even when the going gets tough',
+    description:
+      'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.',
+  },
+];
+
+export const VACANCIES = [
+  {
+    title: 'Senior Full-Stack Engineer',
+    subtitle: [
+      'Full-time position',
+      'Berlin or remote',
+      '€65-85k, 0.5-1.50% equity share options',
+    ],
+  },
+  {
+    title: 'Senior Designer',
+    subtitle: [
+      'Full-time position',
+      'Berlin or remote',
+      '€65-85k, 0.5-1.50% equity share options',
+    ],
+  },
+  {
+    title: 'Senior Designer',
+    subtitle: [
+      'Full-time position',
+      'Berlin or remote',
+      '€65-85k, 0.5-1.50% equity share options',
+    ],
   },
 ];
