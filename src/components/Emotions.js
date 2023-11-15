@@ -66,7 +66,7 @@ const Emotions = () => {
                 <div
                   className={`${manifesto.background} px-4 py-6 rounded-xl w-full grow h-full `}
                 >
-                  <h1 className="text-3xl lg:text-4xl font-bold text-start mb-4">
+                  <h1 className="text-2xl lg:text-2xl font-bold text-start mb-4">
                     {manifesto.emoji}
                   </h1>
                   <h2 className="text-sm lg:text-xl font-bold">

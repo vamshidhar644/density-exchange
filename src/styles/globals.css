@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* customize the scrollbar design */
@@ -28,4 +29,10 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #699f12;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.cursive-text {
+  font-family: 'Indie Flower', cursive;
 }

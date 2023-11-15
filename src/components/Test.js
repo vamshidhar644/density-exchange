@@ -11,14 +11,15 @@ const Test = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
             Before you get started
           </h1>
-          <p className="text-center text-base md:text-lg lg:text-xl mt-4">
+          <p className="text-center text-base md:text-lg lg:text-xl mt-4 mb-6">
             {
               "We won't share your answers with anyone (and won't ever tell you which friends said what about you)"
             }
             <br></br>
+            <br></br>
             with love,
-            <span className="text-[#3a3a3a] text-sm md:text-base lg:text-lg pl-1">
-              Team akuod
+            <span className="text-[#3a3a3a] text-sm md:text-base lg:text-lg pl-1 cursive-text">
+              Team ahead
             </span>
           </p>
           <button className="bg-black text-white text-sm md:text-base lg:text-lg rounded-[24px] px-6 py-3">

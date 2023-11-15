@@ -15,9 +15,9 @@ const Navbar = () => {
           <div className="flex px-2 lg:px-0">
             <div className="flex-shrink-0 flex items-center justify-start">
               <Image
-                className="block h-10 sm:h-12 w-auto"
-                width={64}
-                height={64}
+                className="block h-14 sm:h-12 w-auto"
+                width={72}
+                height={72}
                 src="/images/logo.png"
                 alt="Logo"
               />
